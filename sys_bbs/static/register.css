@@ -26,3 +26,27 @@ h2 {
     margin-top: 5px;
     display: none;
 }
+.verification-group {
+    display: flex;
+    gap: 10px;
+}
+#verification-code {
+    flex: 1;
+}
+#send-code-btn {
+    padding: 12px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#send-code-btn:disabled {
+    background: #c3cfe1;
+    cursor: not-allowed;
+}
+.timer {
+    color: #718096;
+    font-size: 14px;
+}

@@ -19,6 +19,7 @@
         } else {
             // 修改后的SQL查询（只查询用户名）
             $sql = "SELECT id, name, username, password FROM users WHERE username = ?";
+            $sql_phone = "SELECT id, name, username, password FROM users WHERE phone = ?";
             if ($stmt = $conn->prepare($sql)) {
                 $stmt->bind_param("s", $username);
                 $stmt->execute();
@@ -65,7 +66,7 @@
 
     <form method="POST" action="">
         <div class="form-group">
-            <input type="text" id="username" name="username" placeholder="请输入用户名" required autofocus>
+            <input type="text" id="username" name="username" placeholder="请输入手机号或用户名" required autofocus>
         </div>
 
         <div class="form-group">
